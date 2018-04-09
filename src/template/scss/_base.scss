@@ -1,0 +1,32 @@
+body {
+  background-color: $background-color-primary;
+  font-family: 'Roboto', sans-serif;
+}
+
+  .search-box {
+    display: flex;
+  }
+  
+  .list-group li,
+  .card-title {
+    text-transform: capitalize;
+  }
+  
+  .form-group {
+    display: flex;
+  }
+  
+  .project {
+    font-size: 16px;
+  }
+  
+  .overlay {
+    width: 100%;
+    float: left;
+    background: #000;
+    height: 2900px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .7;
+  }

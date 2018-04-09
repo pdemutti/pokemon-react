@@ -1,0 +1,53 @@
+.btn {
+    margin-right: 5px;
+  }
+  
+  .search-box {
+    display: flex;
+  }
+  
+  .logo{
+    font-size: 24px;
+  }
+  .nav-brand {
+    padding: 10px 15px;
+    font-size: 17px;
+  }
+  
+  .list-group li, .card-title {
+    text-transform: capitalize;
+  }
+  
+  .form-group {
+    display: flex;
+  }
+  
+  .project {
+    font-size: 16px;
+  }
+  
+  .navbar-inverse {
+    background-color: $navbar-background-color;
+    border-color: $navbar-border-color;
+  }
+  .navbar-inverse .navbar-nav>li>a {
+    font-weight: 600;
+    color: $text-color-tertiary;
+  }
+  .navbar-inverse .navbar-nav>li>a:hover {
+    font-weight: 600;
+    color: $hover-color;
+  }
+  .navbar-brand {
+    padding: 8px 12px;
+    display: flex;
+  }   
+  .navbar-brand img:hover {
+    width: 37px;
+    height: 37px;
+  }
+  .navbar-right {
+    margin-right: 12px;
+  }
+   
+   
