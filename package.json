@@ -8,7 +8,8 @@
     "express": "^4.16.3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.1.1"
+    "react-scripts": "1.1.1",
+    "regjsgen": "^0.4.0"
   },
   "scripts": {
     "build-css": "node-sass-chokidar src/template/scss/main.scss -o src/template",
@@ -33,6 +34,7 @@
     "file-loader": "^0.9.0",
     "font-awesome": "^4.7.0",
     "jest": "^22.4.3",
+    "node-sass-chokidar": "^1.2.2",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-router": "^3.0.2",
