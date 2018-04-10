@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../main/logo.svg';
 
-export default props => (
+export default () => (
   <nav className='navbar navbar-inverse bg-inverse '>
     <div className="container">
       <div className="navbar-header">

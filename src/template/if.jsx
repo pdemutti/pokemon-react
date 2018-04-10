@@ -2,8 +2,8 @@ import React from 'react';
 
 export default props => {
   if(props.test) {
-    return props.children;
+    return <div>{props.children}</div>;
   } else {
-    return false;
+    return <div />;
   }
 }

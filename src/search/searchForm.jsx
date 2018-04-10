@@ -29,12 +29,12 @@ export default props => {
             value={props.description}
             onKeyPress={props.handleKeyPress}
             onChange={props.handleChange} />
-            <IconButton
+          <IconButton
             style="primary"
             icon="search"
             description={props.description}
-            onClick={props.handleSearch}>
-          </IconButton>
+            onClick={props.handleSearch}
+          />
         </div>     
       </Grid>     
     </div>
