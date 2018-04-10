@@ -45,8 +45,6 @@ To build to production
 ## Running tests with Jest
 
     > $ npm run test or yarn test
-	> $ git push heroku master
-
 
 ## Endpoints Documentation 
 
