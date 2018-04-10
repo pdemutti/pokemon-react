@@ -25,21 +25,26 @@ Before start Pokedex application, we need to build .scss files
 
 To build css
 
-    > $ npm run build-css
+    > $ npm run build-css or yarn build-css
 
 To build css and keep watching for changed files
 
-    > $ npm run watch-css
+    > $ npm run watch-css or yarn watch-css
 
 To run in dev mode
 
-    > $ npm run dev
+    > $ npm run dev or yarn dev
 
 ## Deploying in heroku
 
 To build to production
 
-    > $ npm run prod
+    > $ npm run prod or yarn prod
+	> $ git push heroku master
+
+## Running tests with Jest
+
+    > $ npm run test or yarn test
 	> $ git push heroku master
 
 
@@ -136,7 +141,7 @@ body:
 
 The basic structure of this challenge is given in the following way:
 
-*  `pokemon-challenge/` Contains the source code of the front-end challenge.
+*  `pokemon-react/` Contains the source code of the front-end challenge.
 
 *  `node_modules/` Contains all dependencies fetched via \[NPM\](https://www.npmjs.org/). However, this directory is unnecessary for versioning, so it is ignored.
 
