@@ -41,6 +41,7 @@ To build to production
 
     > $ npm run prod or yarn prod
 	> $ git push heroku master
+	Avaliable at https://arcane-woodland-81813.herokuapp.com/#/search
 
 ## Running tests with Jest
 
