@@ -1,0 +1,1 @@
+export const INPUT_SEARCH_VALUE = 'INPUT_SEARCH_VALUE';

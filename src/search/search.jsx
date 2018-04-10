@@ -6,12 +6,14 @@ import SearchForm from './searchForm'
 import SearchList from './searchList'
 import Alert from '../template/alert'
 import Loading from '../template/loading';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { keyPressInput } from '../actions';
 
-export default class Search extends Component {
+class Search extends Component {
   constructor (props) {
     super(props);
     this.state = {
-      description: '',
       pokemonDetails: {
         list: []
       },
@@ -21,27 +23,21 @@ export default class Search extends Component {
       alertType: 'success',
       showLoading: false,
       selectedOption: 'pokemon'
-    };
-
-    this.handleChange = this.handleChange.bind(this);   
-    this.handleSearch = this.handleSearch.bind(this);
-    this.handleKeyPress = this.handleKeyPress.bind(this);
-    this.handleChangeSearchMode = this.handleChangeSearchMode.bind(this);
-    
+    };  
   }
-  handleKeyPress (e) {
+  handleKeyPress = e => {
     if(e.key == 'Enter'){
       console.log('enter press here! ')
       this.handleSearch();
     }
   }
-  handleChange (e) {
-    this.setState({...this.state, description: e.target.value});
+  handleChange = e => {
+    this.props.keyPressInput(e.target.value)
   }
-  handleChangeSearchMode (e) {
-    this.setState({...this.state, selectedOption: e.target.value});
+  handleChangeSearchMode = e => {
+    this.setState({selectedOption: e.target.value});
   }
-  retrieveData (builtUrl) {
+  retrieveData = builtUrl => {
     
     fetch(builtUrl).then(function(response) {  
       return response.json();
@@ -65,63 +61,90 @@ export default class Search extends Component {
             height: response.height,
             id: response.id
           }
-          this.setState({...this.state, pokemonDetails: listaDePokemons});
-          this.setState({...this.state, alertTxt: 'Sua pesquisa retornou o pokemon '+ this.state.pokemonDetails.name});
-
+          this.setState({
+            pokemonDetails: listaDePokemons,
+            alertTxt: `Sua pesquisa retornou o pokemon ${listaDePokemons.name}`
+          })
+       
         } else if(this.state.selectedOption === "ability") {
           
           var listaDePokemons = {
             name: response.name,
             list: response.pokemon
           }
-          this.setState({...this.state, pokemonDetails: listaDePokemons});
-          this.setState({...this.state, alertTxt: 'Você pesquisou pela Habilidade '+ this.state.pokemonDetails.name});
+          this.setState({
+            pokemonDetails: listaDePokemons,
+            alertTxt: `Você pesquisou pela Habilidade  ${listaDePokemons.name}`
+          })
         }
-        this.setState({...this.state, showAlert: true});
-        this.setState({...this.state, alertType: 'success'});
+        this.setState({
+          showAlert: true,
+          alertType: 'success'
+        })
         
       } else {
-        this.setState({...this.state, alertTxt: 'Erro, tente novamente'});
-        this.setState({...this.state, alertType: 'danger'});
-        this.setState({...this.state, showAlert: true});
-        this.setState({...this.state, pokemonDetails: {}});
+        this.setState({
+          alertTxt: 'Erro, tente novamente',
+          alertType: 'danger',
+          showAlert: true,
+          pokemonDetails: {}
+        })
       }
     })
   }
-  verifyLoadedProps (data) {
+  verifyLoadedProps = (data) => {
     return typeof data != 'undefined' && Object.keys(data).length !== 0
   } 
-  handleSearch () {
-    const builtUrl = "https://pokeapi.co/api/v2/" + this.state.selectedOption +"/"+ this.state.description + '/';
-    this.setState({...this.state, showLoading: true});
+  handleSearch = () => {
+    const builtUrl = `https://pokeapi.co/api/v2/${this.state.selectedOption}/${this.props.description}/`;
+    this.setState({showLoading: true});
     this.retrieveData(builtUrl);
 
   }
 
   render () {
+    const {
+      showAlert,
+      pokemonDetails,
+      alertTxt,
+      alertType,
+      selectedOption,
+      showLoading
+    } = this.state
+
+    console.log(this.props.description)
     return (
       <div>
-        <PageHeader name="Busca" small="Pokemons"></PageHeader>
+        <PageHeader name="Busca" small="Pokemons" />
         <Alert
-            showAlert={this.state.showAlert}
-            name={this.state.pokemonDetails.name}
-            txt={this.state.alertTxt}
-            type={this.state.alertType}
+            showAlert={showAlert}
+            name={pokemonDetails.name}
+            txt={alertTxt}
+            type={alertType}
         />
         <SearchForm
-          description={this.state.description}
-          selectedOption={this.state.selectedOption}
+          description={this.props.description}
+          selectedOption={selectedOption}
           handleChange={this.handleChange}
           handleChangeSearchMode={this.handleChangeSearchMode}
           handleKeyPress={this.handleKeyPress}
           handleSearch={this.handleSearch}
         />
         <SearchList
-          pokemonDetails={this.state.pokemonDetails}
-          selectedOption={this.state.selectedOption}
+          pokemonDetails={pokemonDetails}
+          selectedOption={selectedOption}
          />
-        <Loading showLoading={this.state.showLoading}/>
+        <Loading showLoading={showLoading}/>
       </div>
     )
   }
 }
+
+const mapStateToProps = store => ({
+  description: store.inputSearchState.description
+});
+
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({ keyPressInput }, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Search)
