@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/bin/node /usr/local/bin/yarn test
+  /usr/bin/node /usr/local/bin/yarn dev
 
 PATH: 
   /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
@@ -20,7 +20,6 @@ npm manifest:
     "private": true,
     "main": "index.js",
     "dependencies": {
-      "axios": "^0.18.0",
       "express": "^4.16.3",
       "regjsgen": "^0.4.0"
     },
@@ -36,7 +35,6 @@ npm manifest:
       "test:watch": "yarn test --watch"
     },
     "devDependencies": {
-      "axios": "^0.15.3",
       "babel-cli": "^6.26.0",
       "babel-core": "^6.26.0",
       "babel-eslint": "^7.2.3",
@@ -6380,7 +6378,7 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: sh
-  Arguments: -c jest src --no-cache --coverage
+  Arguments: -c webpack-dev-server --progress --colors --inline --hot
   Directory: /home/paulodemutti/Documents/workspace/pokemon-react
   Output:
   

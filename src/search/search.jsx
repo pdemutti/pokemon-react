@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios'
 
 import PageHeader from '../template/pageHeader'
 import SearchForm from './searchForm'

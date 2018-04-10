@@ -36,11 +36,8 @@ export default props => {
   const buscaPorIdOuNome = () => {
     const pokemonObject = props.pokemonDetails || {} 
     const imagesObject = pokemonObject.sprites;
-    console.log('listar', pokemonObject);
-
+    
       if(verifyLoadedProps(pokemonObject && imagesObject)){
-        console.log('VERIFICADO')
-        
         var imagesList = Object.values(imagesObject);
          imagesList = imagesList.filter(function(e){return e});
         

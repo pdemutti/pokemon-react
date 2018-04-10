@@ -3,7 +3,6 @@ import Grid from '../template/grid'
 import IconButton from '../template/iconButton'
 
 export default props => {
-  console.log(props)
   return (
     <div role="from" className="Form form-group">
       <Grid cols="12 9 12">

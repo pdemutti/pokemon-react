@@ -83,14 +83,17 @@ export default class Pokemon extends Component {
             height: response.height,
             id: response.id
           }
-          this.setState({...this.state, pokemonDetails: details});
-          this.setState({...this.state, alertTxt: 'Sua pesquisa retornou o pokemon '+ this.state.pokemonDetails.name});
-          
+          this.setState({
+            pokemonDetails: details,
+            alertTxt:  `Sua pesquisa retornou o pokemon ${this.state.pokemonDetails.name}`
+          })
       } else {
-        this.setState({...this.state, alertTxt: 'Erro, tente novamente'});
-        this.setState({...this.state, alertType: 'danger'});
-        this.setState({...this.state, showAlert: true});
-        this.setState({...this.state, pokemonDetails: {}});
+        this.setState({
+          alertTxt: 'Erro, tente novamente',
+          alertType: 'danger',
+          showAlert: true,
+          pokemonDetails: {}
+        })
       }
       
     })
