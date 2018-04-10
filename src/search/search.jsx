@@ -8,7 +8,7 @@ import Alert from '../template/alert'
 import Loading from '../template/loading';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { keyPressInput } from '../actions';
+import { keyPressInput, selectRadio } from '../actions';
 
 class Search extends Component {
   constructor (props) {
@@ -21,8 +21,7 @@ class Search extends Component {
       showAlert: false,
       alertTxt: '',
       alertType: 'success',
-      showLoading: false,
-      selectedOption: 'pokemon'
+      showLoading: false
     };  
   }
   handleKeyPress = e => {
@@ -35,7 +34,7 @@ class Search extends Component {
     this.props.keyPressInput(e.target.value)
   }
   handleChangeSearchMode = e => {
-    this.setState({selectedOption: e.target.value});
+    this.props.selectRadio(e.target.value)
   }
   retrieveData = builtUrl => {
     
@@ -53,7 +52,7 @@ class Search extends Component {
       }
       if (response.detail !== "Not found.") {
      
-        if(this.state.selectedOption === "pokemon") {
+        if(this.props.selectedOption === "pokemon") {
           var listaDePokemons = {
             name: response.name,
             sprites: response.sprites,
@@ -66,7 +65,7 @@ class Search extends Component {
             alertTxt: `Sua pesquisa retornou o pokemon ${listaDePokemons.name}`
           })
        
-        } else if(this.state.selectedOption === "ability") {
+        } else if(this.props.selectedOption === "ability") {
           
           var listaDePokemons = {
             name: response.name,
@@ -96,7 +95,7 @@ class Search extends Component {
     return typeof data != 'undefined' && Object.keys(data).length !== 0
   } 
   handleSearch = () => {
-    const builtUrl = `https://pokeapi.co/api/v2/${this.state.selectedOption}/${this.props.description}/`;
+    const builtUrl = `https://pokeapi.co/api/v2/${this.props.selectedOption}/${this.props.description}/`;
     this.setState({showLoading: true});
     this.retrieveData(builtUrl);
 
@@ -108,7 +107,6 @@ class Search extends Component {
       pokemonDetails,
       alertTxt,
       alertType,
-      selectedOption,
       showLoading
     } = this.state
 
@@ -124,7 +122,7 @@ class Search extends Component {
         />
         <SearchForm
           description={this.props.description}
-          selectedOption={selectedOption}
+          selectedOption={this.props.selectedOption}
           handleChange={this.handleChange}
           handleChangeSearchMode={this.handleChangeSearchMode}
           handleKeyPress={this.handleKeyPress}
@@ -132,7 +130,7 @@ class Search extends Component {
         />
         <SearchList
           pokemonDetails={pokemonDetails}
-          selectedOption={selectedOption}
+          selectedOption={this.props.selectedOption}
          />
         <Loading showLoading={showLoading}/>
       </div>
@@ -141,10 +139,11 @@ class Search extends Component {
 }
 
 const mapStateToProps = store => ({
-  description: store.inputSearchState.description
+  description: store.inputSearchState.description,
+  selectedOption: store.radioFilterState.selectedOption
 });
 
 const mapDispatchToProps = dispatch =>
-  bindActionCreators({ keyPressInput }, dispatch);
+  bindActionCreators({ keyPressInput, selectRadio }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Search)
