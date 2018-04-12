@@ -36,7 +36,7 @@ export default props => {
   const buscaPorIdOuNome = () => {
     const pokemonObject = props.pokemonDetails || {} 
     const imagesObject = pokemonObject.sprites;
-    
+
       if(verifyLoadedProps(pokemonObject && imagesObject)){
         var imagesList = Object.values(imagesObject);
          imagesList = imagesList.filter(function(e){return e});
@@ -46,9 +46,11 @@ export default props => {
           var weight = pokemonObject.weight;
           var height = pokemonObject.height;
           var image1 = imagesList[3];
+          var builtImage = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other-sprites/official-artwork/${pokemonObject.id}.png`;
+
               return  (
                 <div className="card col-md-12">
-                  <img className="card-img-top" data-src={image1} alt="" src={image1} data-holder-rendered="true" />
+                  <img className="card-img-top" data-src={builtImage} alt="" src={builtImage} data-holder-rendered="true" />
                   <div className="card-body">
                     <h5 className="card-title">{name}</h5>
                   </div>

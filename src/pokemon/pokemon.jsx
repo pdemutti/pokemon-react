@@ -43,10 +43,12 @@ export default class Pokemon extends Component {
       var name = pokemonObject.name;
       var weight = pokemonObject.weight;
       var height = pokemonObject.height;
+      var builtImage = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other-sprites/official-artwork/${pokemonObject.id}.png`;
+
       var image1 = imagesList[2];
           return  (
             <div className="card col-md-12">
-              <img className="card-img-top" data-src={image1} alt="" src={image1} data-holder-rendered="true" />
+              <img className="card-img-top" data-src={builtImage} alt="" src={builtImage} data-holder-rendered="true" />
               <div className="card-body">
                 <h5 className="card-title">{name}</h5>
               </div>
