@@ -41,6 +41,7 @@ To build to production
 
     > $ npm run prod or yarn prod
 	> $ git push heroku master
+	Avaliable at https://arcane-woodland-81813.herokuapp.com/#/search
 
 ## Running tests with Jest
 
@@ -133,7 +134,6 @@ body:
     ]...},
   
 ```
-
 ## Structure
 
 
@@ -148,7 +148,10 @@ The basic structure of this challenge is given in the following way:
 *  `.gitignore` The .gitignore file specifies intentionally untracked files that Git should ignore.
 
 *  `LICENSE` A software license tells others what they can and can't do with your source code.
+*  `Procfile` You can use to declare various process types.
 
-*  `package.json` Lists all \[Node.js\](http://nodejs.org/) dependencies.
+* `.babelrc` All Babel API options except the callbacks are allowed
+
+*  `package.json` Lists all \[Node.js\](http://nodejs.org/) dependencies
 
 *  `README.md` Explains how application works.
