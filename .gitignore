@@ -3,3 +3,5 @@
 src/npm-debug.log
 /npm-debug.log
 /coverage
+yarn.lock
+yarn-error.log

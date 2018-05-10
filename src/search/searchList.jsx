@@ -60,8 +60,11 @@ export default props => {
                     <li className="list-group-item card-subtitle mb-2 text-muted">Altura: {height}</li>
                   </ul>
                   <div className="card-body">
-                    <a href={"#/pokemon/" + name} className="card-link">Mais sobre o {name}</a>       
+                  <div className="btn-group btn-group-justified" role="group" aria-label="Justified button group"> 
+                    <a href={"#/pokemon/" + name} className="btn btn-info card-link" role="button"><span className="glyphicon glyphicon-plus" aria-hidden="true"></span> {name}</a> 
+                    <a href="#" className="btn btn-success add-pokedex" role="button"><span className="glyphicon glyphicon-send" aria-hidden="true"></span> Pokédex</a>                     
                   </div>
+                  </div>                  
                 </div>                
               );        
       }

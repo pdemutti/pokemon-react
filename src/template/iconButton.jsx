@@ -5,6 +5,7 @@ export default props => (
   <If test={!props.hide}>
     <button className={'btn btn-' + props.style} onClick={props.onClick} disabled={!props.description}>
       {props.descricao}
+      {props.label}
       <i className={'fa fa-' + props.icon}></i>
     </button>
   </If>

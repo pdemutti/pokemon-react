@@ -1,0 +1,735 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search form should: If snapshot true 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Unknown />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <Grid
+        cols="12 9 12"
+      >
+        <div
+          className="search-mode"
+        >
+          <div
+            className="radio-inline"
+          >
+            <label>
+              <input
+                checked={false}
+                id="pokemon"
+                name="selectedOption"
+                onChange={undefined}
+                type="radio"
+                value="pokemon"
+              />
+              Nome ou número
+            </label>
+          </div>
+          <div
+            className="radio-inline"
+          >
+            <label>
+              <input
+                checked={false}
+                id="ability"
+                name="selectedOption"
+                onChange={undefined}
+                type="radio"
+                value="ability"
+              />
+              Habilidade
+            </label>
+          </div>
+        </div>
+        <div
+          className="search-box"
+        >
+          <input
+            className="form-control"
+            id="description"
+            onChange={undefined}
+            onKeyPress={undefined}
+            placeholder=".:: Search by undefined ::."
+            value={undefined}
+          />
+          <Unknown
+            description={undefined}
+            icon="search"
+            onClick={undefined}
+            style="primary"
+          />
+        </div>
+      </Grid>,
+      "className": "Form form-group",
+      "role": "from",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <div
+            className="search-mode"
+          >
+            <div
+              className="radio-inline"
+            >
+              <label>
+                <input
+                  checked={false}
+                  id="pokemon"
+                  name="selectedOption"
+                  onChange={undefined}
+                  type="radio"
+                  value="pokemon"
+                />
+                Nome ou número
+              </label>
+            </div>
+            <div
+              className="radio-inline"
+            >
+              <label>
+                <input
+                  checked={false}
+                  id="ability"
+                  name="selectedOption"
+                  onChange={undefined}
+                  type="radio"
+                  value="ability"
+                />
+                Habilidade
+              </label>
+            </div>
+          </div>,
+          <div
+            className="search-box"
+          >
+            <input
+              className="form-control"
+              id="description"
+              onChange={undefined}
+              onKeyPress={undefined}
+              placeholder=".:: Search by undefined ::."
+              value={undefined}
+            />
+            <Unknown
+              description={undefined}
+              icon="search"
+              onClick={undefined}
+              style="primary"
+            />
+          </div>,
+        ],
+        "cols": "12 9 12",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="radio-inline"
+              >
+                <label>
+                  <input
+                    checked={false}
+                    id="pokemon"
+                    name="selectedOption"
+                    onChange={undefined}
+                    type="radio"
+                    value="pokemon"
+                  />
+                  Nome ou número
+                </label>
+              </div>,
+              <div
+                className="radio-inline"
+              >
+                <label>
+                  <input
+                    checked={false}
+                    id="ability"
+                    name="selectedOption"
+                    onChange={undefined}
+                    type="radio"
+                    value="ability"
+                  />
+                  Habilidade
+                </label>
+              </div>,
+            ],
+            "className": "search-mode",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <label>
+                  <input
+                    checked={false}
+                    id="pokemon"
+                    name="selectedOption"
+                    onChange={undefined}
+                    type="radio"
+                    value="pokemon"
+                  />
+                  Nome ou número
+                </label>,
+                "className": "radio-inline",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <input
+                      checked={false}
+                      id="pokemon"
+                      name="selectedOption"
+                      onChange={undefined}
+                      type="radio"
+                      value="pokemon"
+                    />,
+                    "Nome ou número",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "checked": false,
+                      "id": "pokemon",
+                      "name": "selectedOption",
+                      "onChange": undefined,
+                      "type": "radio",
+                      "value": "pokemon",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
+                  },
+                  "Nome ou número",
+                ],
+                "type": "label",
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <label>
+                  <input
+                    checked={false}
+                    id="ability"
+                    name="selectedOption"
+                    onChange={undefined}
+                    type="radio"
+                    value="ability"
+                  />
+                  Habilidade
+                </label>,
+                "className": "radio-inline",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <input
+                      checked={false}
+                      id="ability"
+                      name="selectedOption"
+                      onChange={undefined}
+                      type="radio"
+                      value="ability"
+                    />,
+                    "Habilidade",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "checked": false,
+                      "id": "ability",
+                      "name": "selectedOption",
+                      "onChange": undefined,
+                      "type": "radio",
+                      "value": "ability",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
+                  },
+                  "Habilidade",
+                ],
+                "type": "label",
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <input
+                className="form-control"
+                id="description"
+                onChange={undefined}
+                onKeyPress={undefined}
+                placeholder=".:: Search by undefined ::."
+                value={undefined}
+              />,
+              <Unknown
+                description={undefined}
+                icon="search"
+                onClick={undefined}
+                style="primary"
+              />,
+            ],
+            "className": "search-box",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "form-control",
+                "id": "description",
+                "onChange": undefined,
+                "onKeyPress": undefined,
+                "placeholder": ".:: Search by undefined ::.",
+                "value": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "description": undefined,
+                "icon": "search",
+                "onClick": undefined,
+                "style": "primary",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": [Function],
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <Grid
+          cols="12 9 12"
+        >
+          <div
+            className="search-mode"
+          >
+            <div
+              className="radio-inline"
+            >
+              <label>
+                <input
+                  checked={false}
+                  id="pokemon"
+                  name="selectedOption"
+                  onChange={undefined}
+                  type="radio"
+                  value="pokemon"
+                />
+                Nome ou número
+              </label>
+            </div>
+            <div
+              className="radio-inline"
+            >
+              <label>
+                <input
+                  checked={false}
+                  id="ability"
+                  name="selectedOption"
+                  onChange={undefined}
+                  type="radio"
+                  value="ability"
+                />
+                Habilidade
+              </label>
+            </div>
+          </div>
+          <div
+            className="search-box"
+          >
+            <input
+              className="form-control"
+              id="description"
+              onChange={undefined}
+              onKeyPress={undefined}
+              placeholder=".:: Search by undefined ::."
+              value={undefined}
+            />
+            <Unknown
+              description={undefined}
+              icon="search"
+              onClick={undefined}
+              style="primary"
+            />
+          </div>
+        </Grid>,
+        "className": "Form form-group",
+        "role": "from",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <div
+              className="search-mode"
+            >
+              <div
+                className="radio-inline"
+              >
+                <label>
+                  <input
+                    checked={false}
+                    id="pokemon"
+                    name="selectedOption"
+                    onChange={undefined}
+                    type="radio"
+                    value="pokemon"
+                  />
+                  Nome ou número
+                </label>
+              </div>
+              <div
+                className="radio-inline"
+              >
+                <label>
+                  <input
+                    checked={false}
+                    id="ability"
+                    name="selectedOption"
+                    onChange={undefined}
+                    type="radio"
+                    value="ability"
+                  />
+                  Habilidade
+                </label>
+              </div>
+            </div>,
+            <div
+              className="search-box"
+            >
+              <input
+                className="form-control"
+                id="description"
+                onChange={undefined}
+                onKeyPress={undefined}
+                placeholder=".:: Search by undefined ::."
+                value={undefined}
+              />
+              <Unknown
+                description={undefined}
+                icon="search"
+                onClick={undefined}
+                style="primary"
+              />
+            </div>,
+          ],
+          "cols": "12 9 12",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="radio-inline"
+                >
+                  <label>
+                    <input
+                      checked={false}
+                      id="pokemon"
+                      name="selectedOption"
+                      onChange={undefined}
+                      type="radio"
+                      value="pokemon"
+                    />
+                    Nome ou número
+                  </label>
+                </div>,
+                <div
+                  className="radio-inline"
+                >
+                  <label>
+                    <input
+                      checked={false}
+                      id="ability"
+                      name="selectedOption"
+                      onChange={undefined}
+                      type="radio"
+                      value="ability"
+                    />
+                    Habilidade
+                  </label>
+                </div>,
+              ],
+              "className": "search-mode",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <label>
+                    <input
+                      checked={false}
+                      id="pokemon"
+                      name="selectedOption"
+                      onChange={undefined}
+                      type="radio"
+                      value="pokemon"
+                    />
+                    Nome ou número
+                  </label>,
+                  "className": "radio-inline",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <input
+                        checked={false}
+                        id="pokemon"
+                        name="selectedOption"
+                        onChange={undefined}
+                        type="radio"
+                        value="pokemon"
+                      />,
+                      "Nome ou número",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "checked": false,
+                        "id": "pokemon",
+                        "name": "selectedOption",
+                        "onChange": undefined,
+                        "type": "radio",
+                        "value": "pokemon",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "input",
+                    },
+                    "Nome ou número",
+                  ],
+                  "type": "label",
+                },
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <label>
+                    <input
+                      checked={false}
+                      id="ability"
+                      name="selectedOption"
+                      onChange={undefined}
+                      type="radio"
+                      value="ability"
+                    />
+                    Habilidade
+                  </label>,
+                  "className": "radio-inline",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <input
+                        checked={false}
+                        id="ability"
+                        name="selectedOption"
+                        onChange={undefined}
+                        type="radio"
+                        value="ability"
+                      />,
+                      "Habilidade",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "checked": false,
+                        "id": "ability",
+                        "name": "selectedOption",
+                        "onChange": undefined,
+                        "type": "radio",
+                        "value": "ability",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "input",
+                    },
+                    "Habilidade",
+                  ],
+                  "type": "label",
+                },
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <input
+                  className="form-control"
+                  id="description"
+                  onChange={undefined}
+                  onKeyPress={undefined}
+                  placeholder=".:: Search by undefined ::."
+                  value={undefined}
+                />,
+                <Unknown
+                  description={undefined}
+                  icon="search"
+                  onClick={undefined}
+                  style="primary"
+                />,
+              ],
+              "className": "search-box",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "form-control",
+                  "id": "description",
+                  "onChange": undefined,
+                  "onKeyPress": undefined,
+                  "placeholder": ".:: Search by undefined ::.",
+                  "value": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "description": undefined,
+                  "icon": "search",
+                  "onClick": undefined,
+                  "style": "primary",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": [Function],
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;
